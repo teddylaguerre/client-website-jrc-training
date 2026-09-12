@@ -237,7 +237,6 @@
     <li class="nav-tab" onclick="showPage('about')">About</li>
     <li class="nav-tab" onclick="showPage('services')">Services</li>
     <li class="nav-tab" onclick="showPage('results')">Results</li>
-    <li class="nav-tab" onclick="showPage('videos')">Videos</li>
     <li class="nav-tab" onclick="showPage('contact')">Contact</li>
     <li class="nav-tab nav-book" onclick="showPage('contact')">Book Now</li>
   </ul>
@@ -332,7 +331,8 @@
 
         <div class="creds">
           <div class="cred-item"><div class="cred-icon">🏅</div><div class="cred-text"><strong>NASM Certified Personal Trainer</strong>National Academy of Sports Medicine — Certified</div></div>
-          <div class="cred-item"><div class="cred-icon">🥗</div><div class="cred-text"><strong>Nutrition Coaching Certified</strong>Credential details coming soon</div></div>
+          <div class="cred-item"><div class="cred-icon">🥗</div><div class="cred-text"><strong>NASM Certified Nutrition Coach</strong>National Academy of Sports Medicine · Cert #1251554205 · Exp 07/2027</div></div>
+          <div class="cred-item"><div class="cred-icon">🧘</div><div class="cred-text"><strong>Dynamic Stretch Specialist</strong>Dynamic Personal Training · ACE, NSCA & NASM Approved · 08/2026</div></div>
           <div class="cred-item"><div class="cred-icon">🏋️</div><div class="cred-text"><strong>Experience</strong>YMCA · F45 Training · Elite Home Fitness · Lifetime Fitness</div></div>
           <div class="cred-item"><div class="cred-icon">📱</div><div class="cred-text"><strong>Follow the Daily Work</strong>@jrc_training on Instagram · YouTube: JRCTRAINING</div></div>
         </div>
@@ -501,33 +501,6 @@
   <footer><div class="footer-logo">JRC<span>.</span></div><div class="footer-copy">© 2025 Just Right Coaching & Training · All Rights Reserved</div><button class="footer-btn" onclick="showPage('contact')">Book Now ↗</button></footer>
 </div>
 
-<!-- ══ VIDEOS ══ -->
-<div class="page" id="page-videos">
-  <section class="section" style="background:var(--black);">
-    <div class="section-label">See the Work</div>
-    <h2 class="section-title">Videos<br><span style="color:var(--gold)">Coming Soon.</span></h2>
-    <p class="section-body" style="margin-bottom:40px;">Training content is on the way. Subscribe to <strong style="color:var(--gold);">@jrc_training</strong> on Instagram and <strong style="color:var(--gold);">JRCTRAINING</strong> on YouTube to stay updated.</p>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:700px;">
-      <a href="https://instagram.com/jrc_training" target="_blank" style="display:flex;align-items:center;gap:18px;padding:28px 24px;background:var(--card);border:1px solid var(--border);text-decoration:none;transition:border-color 0.2s;">
-        <div style="width:50px;height:50px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--black);flex-shrink:0;">📸</div>
-        <div>
-          <div style="font-family:var(--font-condensed);font-weight:700;font-size:0.95rem;letter-spacing:0.1em;color:var(--white);">@jrc_training</div>
-          <div style="font-size:0.85rem;color:var(--gray);">Follow on Instagram</div>
-        </div>
-      </a>
-      <a href="https://youtube.com/@JRCTRAINING" target="_blank" style="display:flex;align-items:center;gap:18px;padding:28px 24px;background:var(--card);border:1px solid var(--border);text-decoration:none;transition:border-color 0.2s;">
-        <div style="width:50px;height:50px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--black);flex-shrink:0;">▶️</div>
-        <div>
-          <div style="font-family:var(--font-condensed);font-weight:700;font-size:0.95rem;letter-spacing:0.1em;color:var(--white);">JRCTRAINING</div>
-          <div style="font-size:0.85rem;color:var(--gray);">Subscribe on YouTube</div>
-        </div>
-      </a>
-    </div>
-  </section>
-  <footer><div class="footer-logo">JRC<span>.</span></div><div class="footer-copy">© 2025 Just Right Coaching & Training · All Rights Reserved</div><button class="footer-btn" onclick="showPage('contact')">Book Now ↗</button></footer>
-</div>
-
 <!-- ══ CONTACT ══ -->
 <div class="page" id="page-contact">
   <section class="section" style="background:var(--black);">
@@ -573,7 +546,7 @@ function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  const map = { home: 0, about: 1, services: 2, results: 3, videos: 4, contact: 5 };
+  const map = { home: 0, about: 1, services: 2, results: 3, contact: 4 };
   if (map[id] !== undefined) document.querySelectorAll('.nav-tab')[map[id]].classList.add('active');
   window.scrollTo(0, 0);
   document.getElementById('navTabs').classList.remove('open');
